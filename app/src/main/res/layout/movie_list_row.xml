@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+		xmlns:android="http://schemas.android.com/apk/res/android"
+>
+
+	<data>
+		<variable
+				name="user"
+				type="naseem.recycleview.com.universaladapter.Movie"/>
+	</data>
+
+	<RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="?android:attr/selectableItemBackground"
+                android:clickable="true"
+                android:focusable="true"
+                android:orientation="vertical"
+                android:padding="10dp">
+
+	<TextView
+			android:id="@+id/title"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_alignParentTop="true"
+			android:textColor="#000"
+			android:text="@{user.title}"
+			android:textSize="16dp"
+			android:textStyle="bold" />
+
+	<TextView
+			android:id="@+id/genre"
+			android:text="@{user.genre}"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_below="@id/title" />
+
+	<TextView
+			android:id="@+id/year"
+			android:text="@{user.year}"
+
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_alignParentRight="true"
+			android:textColor="#cac2c2" />
+
+</RelativeLayout>
+
+</layout>
